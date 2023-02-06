@@ -1,12 +1,19 @@
 # Job Portal
-## Required Features
-* Job Portal
 
-* Search
+This project is a web platform designed to help job seekers and employers. The features included in this project are 
 
-* Search Listing (sorting, filtering)
+    * Searching by Keyword, Location, Company or Salary​
 
-* Details
+    * Filtering functionality by Location​
 
-* Post/Modify/Delete a Job
+    * Sorting by Date or Salary​
 
+    * Job Details functionality with company logo​
+
+    * Posting a new job with multiple locations​
+
+    * Modifying a job by re-using posting functionality​
+
+    * Deleting a job by it’s ID​
+
+    * Dark mode switching feature
