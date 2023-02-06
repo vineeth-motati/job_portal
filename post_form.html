@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post a job</title>
+
+        <!-- linking the stylesheet(CSS) -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/css/style_for_posting.css"
+        />
+        <link rel="stylesheet" href="/css/font-awesome.min.css" />
+        <link rel="icon" href="/img/title_logo.png" type="image/icon type" />
+    </head>
+
+    <body>
+        <div class="navbar_container">
+            <div class="vinjob_logo">
+                <img
+                    class="fa-spin-hover"
+                    src="img/VINJOB(BLACK).svg.svg"
+                    alt="vinjob logo"
+                    width="90"
+                    onclick="window.location='/index.html'"
+                />
+            </div>
+            <nav>
+                <ul class="navbar_links">
+                    <li>
+                        <a id="search_it" href="/index.html" target="_blank"
+                            ><i
+                                class="fa fa-search fa-spin-hover"
+                                aria-hidden="true"
+                            ></i>
+                            Search</a
+                        >
+                    </li>
+                    <li style="border-bottom: 1px solid black">
+                        <a id="post_it" href="#">
+                            <i
+                                class="fa fa-plus-circle fa-spin-hover"
+                                aria-hidden="true"
+                            ></i>
+                            Post
+                        </a>
+                    </li>
+                    <li>
+                        <a id="delete_it" href="/delete_it.html" target="_blank"
+                            ><i
+                                class="fa fa-times-circle fa-spin-hover"
+                                aria-hidden="true"
+                            ></i>
+                            Delete</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="form_wrapper">
+            <form id="job_post_form" class="job_post_form">
+                <!-- Job ID -->
+                <label id="job_id_label">Job ID </label>
+                <input id="job_id" type="text" name="Job ID" disabled /> <br />
+                <br />
+                <!-- Job Title -->
+                <label id="job_title_label">Job Title </label>*
+                <input
+                    id="job_title"
+                    type="text"
+                    name="JobTitle"
+                    placeholder="Enter the Job Title"
+                    title="Please enter the Job title"
+                    minlength="3"
+                    required
+                />
+                <br />
+                <br />
+                <!-- Company name -->
+                <label id="company_label">Company </label>*
+                <input
+                    id="company"
+                    type="text"
+                    name="Company"
+                    placeholder="Enter the name of the company"
+                    required
+                />
+                <br />
+                <br />
+                <!-- Company logo -->
+                <label id="company_logo_label">Company Logo </label>(Optional)
+                <input
+                    id="company_logo"
+                    type="text"
+                    name="Company Logo"
+                    placeholder="Enter the URL for the company logo"
+                    pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$"
+                    title="Must be a valid URL for images"
+                />
+                <br />
+                <br />
+                <br />
+                <!-- Location -->
+                <label id="location_label"> Location </label>*
+                <br />
+                <select id="location" required>
+                    <option class="opt" value="" disabled selected>
+                        &#xf041; Select your Location
+                    </option>
+                    <option class="opt" value="Hyderabad">Hyderabad</option>
+                    <option class="opt" value="Bengaluru">
+                        Banglore/Bengaluru
+                    </option>
+                    <option class="opt" value="Gurgaon">Gurgaon</option>
+                    <option class="opt" value="Mumbai">Mumbai</option>
+                    <option class="opt" value="Noida">Noida</option>
+                    <option class="opt" value="Delhi">Delhi</option>
+                    <option class="opt" value="Chandigarh">Chandigarh</option>
+                    <option class="opt" value="Pune">Pune</option>
+                    <option class="opt" value="Kolkata">Kolkata</option>
+                </select>
+
+                <br />
+                <br />
+                <!-- Salary range -->
+                <div id="salary_range">
+                    <label> Salary Range (INR) </label>*<br />
+                    <input
+                        id="sal_min"
+                        type="text"
+                        name="sal_min"
+                        placeholder="Enter Minimum salary"
+                        required
+                    />
+                    <label> to</label>
+                    <input
+                        id="sal_max"
+                        type="text"
+                        name="sal_max"
+                        placeholder="Enter Maximum salary"
+                        required
+                    /><br />
+                </div>
+                <br />
+                <!-- Experience Range -->
+                <div id="experience_range">
+                    <label> Experience Range </label>*<br />
+                    <input
+                        id="exp_min"
+                        type="number"
+                        name="exp_min"
+                        placeholder="Enter Minimum experience required"
+                        required
+                    />
+                    <label> to</label>
+                    <input
+                        id="exp_max"
+                        type="number"
+                        name="exp_max"
+                        placeholder="Enter Maximum experience required"
+                        required
+                    /><br />
+                </div>
+                <br />
+                <!-- Job Description -->
+                <label id="jd_label"> Job Description </label>*
+                <br />
+                <textarea
+                    id="jd"
+                    cols="70"
+                    rows="3"
+                    value="Responsibilities"
+                    placeholder="Enter the Job Description"
+                    required
+                ></textarea>
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <div id="industry_functional">
+                    <label> Industry and Functioning </label>*<br />
+                    <input
+                        id="indstry"
+                        type="text"
+                        name="Industry"
+                        placeholder="Enter the Industry"
+                        required
+                    />
+                    <input
+                        id="fnctn"
+                        type="text"
+                        name="Functional Area"
+                        placeholder="Enter Functioning"
+                        required
+                    /><br />
+                </div>
+                <br />
+                <div id="role_category">
+                    <label> Role category and Role </label>*<br />
+                    <input
+                        id="rl_ctgry"
+                        type="text"
+                        name="Role Category"
+                        placeholder="Enter the category of Role"
+                        required
+                    />
+                    <input
+                        id="role"
+                        type="text"
+                        name="Role"
+                        placeholder="Enter the Role"
+                        required
+                    /><br />
+                </div>
+                <br />
+                <!-- Skills -->
+                <label id="ss_label">Skills set </label>*
+                <br />
+                <textarea
+                    id="ss"
+                    cols="70"
+                    rows="1"
+                    name="Key Skills"
+                    placeholder="Enter the required skills separated by comma"
+                    required
+                ></textarea>
+                <span style="font-size: smaller">
+                    Fields marked '*' are required
+                </span>
+                <br />
+                <br />
+                <!-- Submit button -->
+                <input id="submit_btn" type="submit" value="Post Job" />
+            </form>
+        </div>
+
+        <script src="./js/sorter.js"></script>
+        <script src="./js/filter.js"></script>
+        <script src="./js/render.js"></script>
+        <!-- <script src="./script.js"></script> -->
+        <script src="./js/poster.js"></script>
+    </body>
+</html>

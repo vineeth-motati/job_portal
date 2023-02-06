@@ -1,0 +1,280 @@
+* {
+    font-size: 99%;
+    font-family: "Calibri", "FontAwesome";
+    transition: all 0.3s ease-in-out !important;
+}
+
+@keyframes stamp {
+    0% {
+        background-size: 180% 140%, 100% 100%;
+    }
+
+    100% {
+        background-size: 90% 70%, 100% 100%;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shrink {
+    from {
+        width: 90%;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+
+body {
+    animation: stamp 1s cubic-bezier(0.6, -0.28, 1, 0.045), fadein 1.5s;
+    /* animation-iteration-count: infinite; */
+    background-color: rgb(172, 172, 172);
+    background-image: url("/img/new_v.svg"),
+        url("/img/someperson_in_BG_Wants_to_ShakeHands.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-size: cover; */
+    background-size: 90% 70%, 100% 100%;
+    background-position: center, center;
+    padding-bottom: 50% !important;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar_container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-bottom: 5px;
+    color: white;
+    clear: both;
+    overflow: hidden;
+    height: 70px !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid white;
+    z-index: 10000;
+}
+
+nav {
+    position: relative;
+    float: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.vinjob_logo img {
+    position: inherit;
+    float: left;
+    transition: all 1s ease-in-out !important;
+}
+
+.vinjob_logo:hover .fa-spin-hover {
+    transform: rotateY(360deg);
+}
+
+.navbar_links li {
+    display: inline-block;
+    padding: 10px 20px 10px 10px;
+    font-size: 20px;
+}
+
+#post_it {
+    color: forestgreen;
+}
+
+#delete_it {
+    color: brown;
+}
+
+#post_it:hover .fa-spin-hover {
+    transform: rotateY(180deg);
+}
+
+#delete_it:hover .fa-spin-hover {
+    transform: rotateY(180deg);
+}
+
+#search_it:hover .fa-spin-hover {
+    transform: rotateY(180deg);
+}
+
+#modify_it:hover .fa-spin-hover {
+    transform: rotateY(180deg);
+}
+
+#dscrptn_wrapper {
+    padding: 2% 3% 2% 3%;
+    margin: 2% 0 0 0;
+    position: absolute;
+    top: 27%;
+    border-radius: 5px;
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    transition: all 0.3s ease-in-out !important;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -20%);
+    /* backdrop-filter: blur(10px); */
+}
+
+#dscrptn_wrapper:hover {
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+#dscrptn_wrapper label {
+    display: block;
+    text-align: left !important;
+    width: 200px;
+    font-weight: bolder;
+    font-size: 19px;
+}
+
+.company_logo {
+    float: left;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    margin: 0 1% 0 0;
+}
+
+.company_logo img {
+    /* height: 100% !important; */
+    height: 70px;
+    width: 70px;
+    max-width: 100%;
+}
+
+.job_apply {
+    background-color: rgb(62, 153, 245);
+    color: white;
+    padding: 15px 32px;
+    /* display: inline-block; */
+    border: none;
+    border-radius: 6px;
+    float: right;
+}
+
+.job_title {
+    font-size: 22px;
+    font-weight: bold;
+    width: 50%;
+    overflow: hidden;
+}
+
+.company {
+    font-size: 17px;
+    overflow: hidden;
+    font-style: oblique;
+    background-color: transparent;
+    width: 40%;
+}
+
+#f table {
+    padding: 1px 0px 0px 0px;
+    width: 70%;
+}
+
+#f td {
+    display: inline-block;
+    padding-left: 3px;
+    width: 30%;
+    overflow-x: auto !important;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: lighter;
+    background-color: transparent;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+    text-align: left;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#j {
+    position: relative;
+    font-size: 18px;
+    width: 98%;
+    height: auto;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236);
+    padding: 0 1% 0 1%;
+    /* text-align: center; */
+    color: rgb(44, 43, 43);
+    margin-top: 7px;
+}
+
+#j p {
+    float: right;
+    display: inline;
+    margin: 0;
+}
+
+.posted_on {
+    margin: 0;
+    float: left !important;
+    padding: 1px;
+    /* width: 33%;   */
+}
+
+.v_line {
+    margin: 0 10px 0 10px;
+    float: left;
+    padding: 1px 0;
+    border-left: 2px solid darkgray;
+    height: 20px;
+    border-radius: 20px;
+}
+
+.job_id {
+    margin: 0;
+    float: left;
+    padding: 1px;
+}
+
+#k {
+    font-size: 15px;
+    margin-top: 2%;
+}
+
+#k ul {
+    padding-left: 3%;
+    line-height: 130%;
+}
+
+#l table {
+    margin-top: 2%;
+    font-size: 17px;
+}
+
+.sub_heading {
+    padding-left: 13px;
+    font-weight: bold;
+    font-size: 17px;
+    text-align: right;
+}
+
+.skill {
+    color: black;
+    background-color: rgba(88, 218, 84, 0.801);
+    border: none;
+    text-align: center;
+    display: inline-block;
+    margin: 2px 15px 2px 0px;
+    border-radius: 6px;
+}

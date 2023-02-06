@@ -1,0 +1,303 @@
+* {
+    font-size: 99%;
+    font-family: "Calibri", "FontAwesome";
+    transition: all 0.3s ease-in-out;
+}
+@keyframes stamp {
+    0% {
+        background-size: 180% 140%, 100% 100%;
+    }
+    100% {
+        background-size: 90% 70%, 100% 100%;
+    }
+}
+body {
+    animation: stamp 1s cubic-bezier(0.6, -0.28, 1, 0.045), fadein 1s;
+    /* animation: fadein 3s; */
+    background-image: url("/img/new_v.svg"),
+        url("/img/somewomann_in_BG_Wants_to_ShakeHands.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 90% 70%, 100% 100%;
+    background-position: center, center;
+    opacity: 1;
+}
+
+.navbar_container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-bottom: 5px;
+    color: black;
+    clear: both;
+    overflow: hidden;
+    height: 70px !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid black;
+    z-index: 10000;
+}
+nav {
+    position: relative;
+    float: right;
+}
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.vinjob_logo img {
+    position: inherit;
+    float: left;
+    transition: all 1s ease-in-out !important;
+}
+.vinjob_logo:hover .fa-spin-hover {
+    transform: rotateY(360deg);
+}
+.navbar_links li {
+    display: inline-block;
+    padding: 10px 20px 10px 10px;
+    font-size: 20px;
+}
+
+#post_it {
+    color: forestgreen;
+}
+#delete_it {
+    color: brown;
+}
+#post_it:hover .fa-spin-hover {
+    transform: rotateY(180deg);
+}
+#delete_it:hover .fa-spin-hover {
+    transform: rotateY(180deg);
+}
+#search_it:hover .fa-spin-hover {
+    transform: rotateY(180deg);
+}
+
+#deletebar_container {
+    height: 300px !important;
+    color: white;
+    border: 10px azure !important;
+}
+
+#deletebar {
+    background-color: rgb(252, 252, 252);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 7px black;
+    padding: 15px;
+    top: 20%;
+    border: none;
+    border-radius: 8px;
+    z-index: 1000;
+    width: 30%;
+    transition: width 0.5s ease, top 0.5s ease, box-shadow 0.3s ease-in-out;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#deletebar:hover {
+    box-shadow: 0 0 20px white;
+}
+.deletebar_at_top {
+    outline: none;
+    top: 10%;
+    width: 50% !important;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+    position: absolute;
+    padding-right: 50px !important;
+}
+
+#search_page_btn {
+    position: fixed;
+    bottom: 4%;
+    left: 2%;
+    background-color: rgb(78, 78, 78);
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 90px -45px 200px 0px rgb(139, 139, 139);
+    transition: all 0.3s ease-in-out !important;
+}
+#search_page_btn:hover {
+    box-shadow: 0 0 20px black;
+}
+
+#search_page_btn:hover .fa-spin-hover {
+    transition: all 0.3s ease-in-out !important;
+    transform: rotate(360deg);
+}
+
+#all_results {
+    /* change this if not working*/
+    overflow: inherit;
+    position: absolute;
+    width: 99%;
+    /* left: 25%; */
+    background-color: transparent;
+    top: 40% !important;
+    z-index: 1000;
+}
+
+.result_card {
+    height: 150px;
+    position: relative;
+    width: 51%;
+    /* margin-top: 200px; */
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: box-shadow 0.3s ease-in-out, width 0.5s ease, height 0.5s ease;
+    /* top: 50%; */
+    /* Fade in animation */
+    animation: fadein 1s;
+}
+
+/* fade in animation */
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.result_card:hover {
+    height: 165px;
+    width: 52%;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+.result_card:hover .job_description {
+    height: 4em;
+}
+
+/* Job details */
+.job_apply {
+    background-color: rgb(245, 62, 62);
+    color: white;
+    padding: 15px 32px;
+    /* display: inline-block; */
+    border: none;
+    border-radius: 6px;
+    float: right;
+}
+
+.job_title {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: transparent;
+    width: 50%;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 3px 0px 0px 3px;
+    /* margin: 12px 0 0 0; */
+}
+.company {
+    border-radius: 5px;
+    overflow: hidden;
+    font-style: oblique;
+    background-color: transparent;
+    width: 40%;
+    padding: 3px 0px 0px 3px;
+    margin: 2px 0 0 0;
+}
+table {
+    padding: 1px 0px 0px 0px;
+    width: 100%;
+}
+td {
+    display: inline-block;
+    height: 20px !important;
+    overflow-x: hidden;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding-left: 1px;
+    width: 32%;
+    font-size: 16px;
+    font-weight: lighter;
+    background-color: transparent;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+    text-align: left;
+    transition: all 0.1s ease-in-out !important;
+}
+::-webkit-scrollbar {
+    display: none;
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+#j {
+    width: 90%;
+    transition: width 0.5s ease;
+    border-radius: 8px;
+}
+#j:hover {
+    width: 100%;
+}
+.job_description {
+    line-height: 1em;
+    height: 3em;
+    margin-top: 0px;
+    margin-right: -20px;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(230, 230, 230);
+    /* text-align: justify; */
+    transition: width 0.5s ease, height 0.5s ease;
+    border-radius: 6px;
+}
+.job_description:hover {
+    height: 4em;
+}
+.job_share {
+    float: right;
+    background-color: rgb(255, 255, 81);
+    border: none;
+    padding: 2px 10px;
+    border-radius: 6px;
+}
+.v_line {
+    float: right;
+    border-left: 2px solid lightslategrey;
+    height: 21px;
+    padding-right: 10px;
+    border-radius: 1px;
+}
+.posted_on {
+    float: right;
+    margin: 1.9px 12px 0 0;
+    color: darkgray;
+}
+.job_skills {
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 70%;
+    padding: 1px 0px 0px 0px;
+    /* background-color: violet; */
+}
+.skill {
+    background-color: rgba(88, 218, 84, 0.801);
+    border: none;
+    text-align: center;
+    display: inline-block;
+    margin: 0px 0px 0px 15px;
+    border-radius: 6px;
+}

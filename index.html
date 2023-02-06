@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Bar</title>
+
+    <!-- linking the stylesheet(CSS) -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+    <link rel="icon" href="/img/title_logo.png" type="image/icon type" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="navbar_container">
+      <div class="vinjob_logo">
+        <img
+          class="fa-spin-hover"
+          src="img/VINJOB(WHITE).svg"
+          alt="vinjob logo"
+          width="90"
+        />
+      </div>
+      <nav>
+        <ul class="navbar_links">
+          <li style="border-bottom: 1px solid white">
+            <a
+              id="search_it"
+              href="#"
+              onclick='document.getElementById("searchbar").focus();'
+              ><i class="fa fa-search fa-spin-hover" aria-hidden="true"></i>
+              Search</a
+            >
+          </li>
+          <li>
+            <a id="post_it" href="/post_form.html" target="_blank">
+              <i class="fa fa-plus-circle fa-spin-hover" aria-hidden="true"></i>
+              Post
+            </a>
+          </li>
+          <li>
+            <a id="delete_it" href="/delete_it.html" target="_blank"
+              ><i
+                class="fa fa-times-circle fa-spin-hover"
+                aria-hidden="true"
+              ></i>
+              Delete</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Search Bar Wapper -->
+    <div id="searchbar_container" class="search">
+      <!-- Search bar -->
+      <input
+        class="centered"
+        id="searchbar"
+        type="text"
+        name="search"
+        title="Press ENTER to see the Magic!!"
+        placeholder="Search for jobs by Keyword, Company, Location or even Salary"
+      />
+      <!-- Search Button -->
+      <button id="search_button" type="submit">
+        <i class="fa fa-search fa-spin-hover" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Filter bar -->
+    <div id="filter_bar">
+      <br />
+      <!-- Select location -->
+      <select
+        id="location_value"
+        class="dropdown"
+        title="Where do you want to work?"
+      >
+        <option value="" disabled selected>
+          &#xf041; Select your Location
+        </option>
+        <option value="hyd">Hyderabad</option>
+        <option value="beng">Banglore/Bengaluru</option>
+        <option value="gurg">Gurgaon</option>
+        <option value="mumb">Mumbai</option>
+        <option value="noid">Noida</option>
+        <option value="delh">Delhi</option>
+        <option value="chan">Chandigarh</option>
+        <option value="pune">Pune</option>
+        <option value="kolk">Kolkata</option>
+      </select>
+
+      <!-- Select sort preference -->
+      <select
+        id="sort_value"
+        class="dropdown"
+        style="float: right"
+        title="C'mon, you know about this.."
+      >
+        <option value="" disabled selected>&#xF0DC; Sort by</option>
+        <option value="rela">Relavance</option>
+        <option value="date">Date</option>
+        <option value="sal">Salary</option>
+      </select>
+    </div>
+
+    <!-- Details regarding results -->
+    <div id="details_bar">
+      <div id="results_found">Results found: 0</div>
+      <div onclick="toggle_darkmode(this)" id="darkmode_toggle">
+        Toggle Dark Mode <i class="fa fa-moon-o" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <div id="all_results" class="">
+      <!-- This is where all results are rendered -->
+    </div>
+
+    <!-- <script src="./js/descripter.js"></script> -->
+    <script src="./js/sorter.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/render.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- <script src="./js/render_advanced.js"></script> -->
+  </body>
+</html>

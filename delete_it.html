@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Delete Job</title>
+        <!-- linking the stylesheet(CSS) -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./css/style_for_delete.css"
+        />
+        <link rel="stylesheet" href="/css/font-awesome.min.css" />
+        <link rel="icon" href="/img/title_logo.png" type="image/icon type" />
+    </head>
+
+    <body>
+        <div class="navbar_container">
+            <div class="vinjob_logo">
+                <img
+                    class="fa-spin-hover"
+                    src="img/VINJOB(BLACK).svg.svg"
+                    alt="vinjob logo"
+                    width="90"
+                    onclick="window.location='/index.html'"
+                />
+            </div>
+            <nav>
+                <ul class="navbar_links">
+                    <li>
+                        <a id="search_it" href="/index.html" target="_blank"
+                            ><i
+                                class="fa fa-search fa-spin-hover"
+                                aria-hidden="true"
+                            ></i>
+                            Search</a
+                        >
+                    </li>
+                    <li>
+                        <a id="post_it" href="/post_form.html" target="_blank">
+                            <i
+                                class="fa fa-plus-circle fa-spin-hover"
+                                aria-hidden="true"
+                            ></i>
+                            Post
+                        </a>
+                    </li>
+                    <li style="border-bottom: 1px solid black">
+                        <a
+                            id="delete_it"
+                            href="#"
+                            onclick='document.getElementById("deletebar").focus();'
+                            ><i
+                                class="fa fa-times-circle fa-spin-hover"
+                                aria-hidden="true"
+                            ></i>
+                            Delete</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="deletebar_container" class="delete">
+            <input
+                class="centered deletebar_at_top"
+                id="deletebar"
+                type="text"
+                name="delete"
+                title="Press ENTER to see the Magic!!"
+                placeholder="Enter Job ID to Delete it"
+            />
+        </div>
+        <div id="all_results"></div>
+
+        <script src="./js/render.js"></script>
+        <script src="./js/deleter.js"></script>
+        <!-- <script src="./js/filter.js"></script> -->
+        <!-- <script src="./js/script.js"></script> -->
+    </body>
+</html>

@@ -1,0 +1,643 @@
+* {
+    font-size: 99%;
+    font-family: 'Calibri', 'FontAwesome';
+    transition: all 0.3s ease-in-out;
+}
+
+/* HTML Body */
+@keyframes stamp {
+    0% {
+        background-size: 180% 140%, 100% 100%;
+    }
+
+    100% {
+        background-size: 90% 70%, 100% 100%;
+    }
+}
+
+@keyframes expand {
+    from {
+        width: 10%;
+    }
+
+    to {
+        width: 44%;
+    }
+}
+
+@keyframes slide_down {
+    from {
+        top: 10%;
+    }
+
+    to {
+        top: 30%;
+    }
+}
+
+@keyframes farther {
+    from {
+        width: 45%;
+        margin-top: 100px;
+    }
+
+    to {
+        width: 22%;
+        margin-top: 0px;
+    }
+}
+
+body {
+    animation: stamp 1s cubic-bezier(0.6, -0.28, 1, 0.045), fadein 1s;
+    /* animation-iteration-count: infinite; */
+    background-color: rgb(172, 172, 172);
+    background-image: url('/img/new_v.svg'),
+        url('/img/someperson_in_BG_Wants_to_ShakeHands.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-size: cover; */
+    background-size: 90% 70%, 100% 100%;
+    background-position: center, center;
+    transition: all 0.1s ease-in-out !important;
+}
+
+.dm_body {
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar_container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-bottom: 5px;
+    color: white;
+    clear: both;
+    overflow: hidden;
+    height: 70px !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid white;
+    z-index: 10000;
+}
+
+nav {
+    position: relative;
+    float: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.vinjob_logo img {
+    position: inherit;
+    float: left;
+    transition: all 1s ease-in-out !important;
+}
+
+.vinjob_logo:hover .fa-spin-hover {
+    transform: rotateY(360deg);
+}
+
+.navbar_links li {
+    display: inline-block;
+    padding: 10px 20px 10px 10px;
+    font-size: 20px;
+}
+
+#post_it {
+    color: forestgreen;
+}
+
+#delete_it {
+    color: rgba(187, 187, 187, 0.7); /*table*/
+    color: rgba(75, 75, 75, 0.7); /*chair*/
+    color: #5c5c5c; /*table stroke*/
+    color: rgba(0, 162, 255, 0.7); /*bar*/
+    color: brown;
+}
+
+#post_it:hover .fa-spin-hover {
+    transform: rotateY(180deg);
+}
+
+#delete_it:hover .fa-spin-hover {
+    transform: rotateY(180deg);
+}
+
+#search_it:hover .fa-spin-hover {
+    transform: rotateY(180deg);
+}
+
+/* Search Bar */
+#searchbar_container {
+    height: 300px !important;
+    color: white;
+    border: 10px azure !important;
+}
+
+#searchbar {
+    background-color: rgb(252, 252, 252);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 7px black;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    z-index: 1000;
+    width: 30%;
+    transition: width 0.5s ease, top 0.5s ease, box-shadow 0.3s ease-in-out;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#searchbar:hover {
+    box-shadow: 0 0 20px white;
+}
+
+.searchbar_at_top {
+    outline: none;
+    top: 20%;
+    width: 50% !important;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+    position: absolute;
+    padding-right: 50px !important;
+}
+
+#search_button {
+    display: none;
+    /* background-color: rgb(252, 252, 252); */
+    /* box-shadow: 0 0 200px rgb(0, 0, 0); */
+
+    position: absolute;
+    opacity: 1;
+    top: 18.4%;
+    left: 74.5%;
+    outline: none;
+    width: auto;
+    height: auto;
+    z-index: 1001;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 10px 10px 10px;
+    margin-top: -10px;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+    animation: fadein 3s;
+}
+
+.search_button_appear {
+    transition: display 2s ease;
+    display: inline !important;
+}
+
+#search_button:hover {
+    transform: rotate(360deg);
+    box-shadow: 0 0 20px white;
+}
+
+#filter_bar {
+    /* background-color: rgb(252, 252, 252); */
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    z-index: 999;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    /* visibility: hidden; */
+    display: none;
+    animation: fadein 0.5s;
+    animation: slide_down 0.5s;
+}
+
+.filter_bar_appear {
+    top: 30%;
+    display: inline-block !important;
+}
+
+/* Dropdonw button */
+.dropdown {
+    top: 100%;
+    animation: fadein 1s;
+    width: 44%;
+    padding: 10px 0 10px 10% !important;
+    outline: none;
+    text-align: center;
+    background-color: rgb(252, 252, 252);
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease-in-out !important;
+    border-radius: 8px;
+    animation: expand 0.5s;
+}
+
+select {
+    -webkit-appearance: none;
+    font-size: 110% !important;
+}
+
+#location_value {
+    border: none;
+    box-shadow: -90px 0 200px 0px black;
+    transition: box-shadow 0.3s ease-in-out !important;
+    transition: all 0.1s ease-in-out;
+}
+
+#sort_value {
+    border: none;
+    box-shadow: 90px 0 200px 0px black;
+    transition: box-shadow 0.3s ease-in-out !important;
+    transition: all 0.1s ease-in-out;
+}
+
+.dropdown:hover,
+#location_value:hover,
+#sort_value:hover {
+    box-shadow: 0 0 20px white;
+}
+
+/* Default option invisible( for plceholer)*/
+option[value=''][disabled] {
+    display: none;
+}
+
+#details_bar {
+    /* background-color: rgb(252, 252, 252); */
+
+    background-color: transparent;
+    color: black;
+    /* padding: 15px; */
+    border: none;
+    border-radius: 8px;
+    z-index: 999;
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    /* visibility: hidden; */
+    display: none;
+    /* animation: fadein 2s; */
+    /* animation: slide_down 0.5s; */
+}
+
+.details_bar_appear {
+    display: inline-block !important;
+}
+
+#results_found {
+    background-color: rgb(252, 252, 252);
+    width: 22%;
+    animation: farther 0.5s;
+    /* background-color: transparent; */
+    color: black;
+    padding: 15px;
+    /* margin-top: -34px; */
+    border: none;
+    border-radius: 8px;
+    z-index: -1 !important;
+    position: relative;
+    font-weight: bold;
+    float: left;
+}
+
+#darkmode_toggle {
+    background-color: rgb(252, 252, 252);
+    /* background-color: transparent; */
+    color: black;
+    padding: 15px;
+    width: 22%;
+    animation: farther 0.5s;
+
+    /* margin-top: -34px; */
+    border: none;
+    border-radius: 8px;
+    z-index: -1;
+    position: relative;
+    float: right !important;
+    font-weight: bold;
+}
+
+#results_found {
+    box-shadow: -90px 0 200px 0px black;
+    transition: box-shadow 0.3s ease-in-out !important;
+    transition: all 0.1s ease-in-out;
+}
+
+#darkmode_toggle {
+    box-shadow: 90px 0 200px 0px black;
+    transition: box-shadow 0.3s ease-in-out !important;
+    transition: all 0.1s ease-in-out;
+}
+
+#results_found:hover,
+#darkmode_toggle:hover {
+    box-shadow: 0 0 20px white;
+}
+
+.dm_results_found,
+.dm_darkmode_toggle,
+.dm_location_value,
+.dm_sort_value,
+.dm_searchbar {
+    box-shadow: 0 0 5px white !important;
+    color: white !important;
+    background-color: rgb(48, 48, 48) !important;
+}
+
+.dm_search_button {
+    color: white !important;
+    background-color: rgb(48, 48, 48) !important;
+}
+
+#all_results {
+    /* change this if not working*/
+    overflow: inherit;
+    position: absolute;
+    width: 99%;
+    /* left: 25%; */
+    background-color: transparent;
+    top: 60% !important;
+    z-index: 1000;
+    /* padding: 2px; */
+}
+
+/* Result card */
+.result_card {
+    height: 150px;
+    position: relative;
+    width: 51%;
+    /* margin-top: 200px; */
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: box-shadow 0.3s ease-in-out, width 0.5s ease, height 0.5s ease;
+    /* top: 50%; */
+    /* Fade in animation */
+    animation: fadein 1s;
+}
+
+.dm_result_card {
+    color: white;
+    background-color: rgb(48, 48, 48);
+}
+
+/* fade in animation */
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.result_card:hover {
+    height: 165px;
+    width: 52%;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.result_card:hover .job_description {
+    height: 4em;
+}
+
+/* Job details */
+.job_apply {
+    background-color: rgb(62, 153, 245);
+    color: white;
+    padding: 15px 32px;
+    /* display: inline-block; */
+    border: none;
+    border-radius: 6px;
+    float: right;
+}
+
+.job_title {
+    border-radius: 5px;
+    overflow-y: hidden;
+    background-color: transparent;
+    max-width: 50%;
+    max-height: 20px;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 3px 0px 0px 3px;
+}
+
+.company {
+    border-radius: 5px;
+    overflow-y: hidden;
+    font-style: oblique;
+    background-color: transparent;
+    max-width: 40%;
+    padding: 3px 0px 0px 3px;
+    margin: 2px 0 0 0;
+}
+
+table {
+    padding: 1px 0px 0px 0px;
+    width: 100%;
+    transition: all 0.1s ease-in-out !important;
+    height: 20px !important;
+}
+
+td {
+    display: inline-block;
+    height: 20px !important;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding-left: 1px;
+    width: 32%;
+    font-size: 16px;
+    font-weight: lighter;
+    background-color: transparent;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+    text-align: left;
+    transition: all 0.1s ease-in-out !important;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#j {
+    width: 90%;
+    transition: width 0.5s ease;
+    border-radius: 8px;
+}
+
+#j:hover {
+    width: 100%;
+}
+
+.job_description {
+    line-height: 1em;
+    height: 3em;
+    margin-top: 0px;
+    margin-right: -20px;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(230, 230, 230);
+    /* text-align: justify; */
+    transition: width 0.5s ease, height 0.5s ease;
+    border-radius: 4px;
+}
+
+.job_description:hover {
+    height: 4em;
+}
+
+.dm_job_description {
+    background-color: rgb(68, 68, 68);
+}
+
+.job_share {
+    float: right;
+    background-color: rgb(255, 255, 81);
+    border: none;
+    padding: 2px 10px;
+    border-radius: 6px;
+}
+
+.v_line {
+    float: right;
+    border-left: 2px solid lightslategrey;
+    height: 21px;
+    padding-right: 10px;
+    border-radius: 1px;
+}
+
+.posted_on {
+    float: right;
+    margin: 1.9px 12px 0 0;
+    color: darkgray;
+}
+
+.dm_posted_on {
+    color: rgb(255, 255, 255) !important;
+}
+
+.job_skills {
+    overflow-x: scroll;
+    white-space: nowrap;
+    max-width: 65%;
+    height: 20px;
+    padding: 1px 0px 0px 0px;
+    background-image: linear-gradient(to right, white, white),
+        linear-gradient(to right, white, white),
+        linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)),
+        linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+    background-position: left center, right center, left center, right center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+    background-attachment: local, local, scroll, scroll;
+    border-radius: 5px;
+}
+
+.dm_job_skills {
+    background-image: linear-gradient(
+            to right,
+            rgb(48, 48, 48),
+            rgb(48, 48, 48)
+        ),
+        linear-gradient(to right, rgb(48, 48, 48), rgb(48, 48, 48)),
+        linear-gradient(to right, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0)),
+        linear-gradient(to left, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0));
+    background-position: left center, right center, left center, right center;
+    background-repeat: no-repeat;
+    background-color: rgb(48, 48, 48);
+    background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+    background-attachment: local, local, scroll, scroll;
+    border-radius: 5px;
+}
+
+.skill {
+    background-color: rgba(88, 218, 84, 0.801);
+    border: none;
+    text-align: center;
+    display: inline-block;
+    margin: 0px 0px 0px 15px;
+    border-radius: 6px;
+}
+
+/* .result_card:blur #delete_this {
+} */
+
+/* #post_a_job{
+    position: absolute;
+    bottom: 4%;
+    left: 2%;
+    width: 100px;
+    height: 100px;
+} */
+#post_btn {
+    position: fixed;
+    bottom: 4%;
+    left: 2%;
+    background-color: forestgreen;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 90px -45px 200px 0px black;
+    transition: all 0.3s ease-in-out !important;
+    z-index: 1000;
+}
+
+#post_btn:hover {
+    box-shadow: 0 0 20px white;
+}
+
+#post_btn:hover .fa-spin-hover {
+    transform: rotate(180deg);
+}
+
+#del_btn {
+    position: fixed;
+    bottom: 4%;
+    right: 2%;
+    background-color: brown;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: -90px -45px 200px 0px black;
+    transition: all 0.3s ease-in-out !important;
+    z-index: 1000;
+}
+
+#del_btn:hover {
+    box-shadow: 0 0 20px white;
+}
+
+#del_btn:hover .fa-spin-hover {
+    transform: rotate(-180deg);
+}

@@ -1,0 +1,96 @@
+<div id="b" class="company_logo">
+    <img
+        src="https://logo.clearbit.com/jnj.com"
+        onerror="document.getElementById('b').style.display='none'"
+        alt="JnJ logo"
+    />
+</div>
+<div id="c" class="apply">
+    <input class="job_apply" type="button" value="VIN this JOB" />
+</div>
+<div id="d" class="job_title">Graphic Designer</div>
+<div id="e" class="company">Apple</div>
+<div id="f">
+    <table id="g" class="job_details">
+        <tr id="h">
+            <td id="i">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                Mumbai
+            </td>
+            <td id="i">
+                <i class="fa fa-suitcase" aria-hidden="true"></i> 4 - 9 yrs
+            </td>
+            <td id="i">
+                <i class="fa fa-inr" aria-hidden="true"></i>
+                2,00,000 - 5,50,000 PA.
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="j">
+    <p class="posted_on">Posted: 3 days ago</p>
+    <div class="v_line"></div>
+    <div class="job_id">Job ID: 2</div>
+    <p>Permanent Job</p>
+    <br />
+</div>
+<div id="k">
+    <label for="job_description">Job Description</label>
+    <ul class="job_description">
+        <li>
+            one-on-one with the top Android, iOS, and web engineers to build
+            exciting new product/API integrations that drive adoption of
+            Google’s developer platforms.
+        </li>
+        <li>
+            Conceive new features and ideas that can change how users interact
+            with apps and Google, and help developers build them.
+        </li>
+        <li>
+            regular, engineering-focused meetings with developers to help them
+            design new systems, fix bugs, improve UX, and solve complex code
+            issues.
+        </li>
+        <li>
+            on the source code of Google's products with other engineers to
+            identify, reproduce, and/or fix bugs that are affecting developers.
+        </li>
+    </ul>
+</div>
+<hr />
+
+<div id="l">
+    <label for="job_details">Job Details</label>
+    <table>
+        <colgroup>
+            <col style="width: 22%" />
+            <col style="width: 90%" />
+        </colgroup>
+        <tr>
+            <td class="sub_heading">Industry :</td>
+            <td>
+                IT/Computers - Hardware & Networking , IT/Computers - Software
+            </td>
+        </tr>
+        <tr>
+            <td class="sub_heading">Functional Area :</td>
+            <td>Accounts , Finance , Tax , Company Secretary , Audit</td>
+        </tr>
+        <tr>
+            <td class="sub_heading">Role Category :</td>
+            <td>Accounts</td>
+        </tr>
+        <tr>
+            <td class="sub_heading">Role :</td>
+            <td>Accounts Executive/Accountant</td>
+        </tr>
+        <tr>
+            <td class="sub_heading">Skills :</td>
+            <td>
+                <button class="skill" type="button">SQLite</button>
+                <button class="skill" type="button">GIT</button>
+                <button class="skill" type="button">SVN</button>
+            </td>
+        </tr>
+    </table>
+</div>

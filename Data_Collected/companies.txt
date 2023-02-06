@@ -1,0 +1,82 @@
+JPMorgan Chase
+Berkshire Hathaway
+Saudi Arabian Oil Company (Saudi Aramco)
+Bank of America
+Apple
+AT&T
+Toyota Motor
+Alphabet
+ExxonMobil
+Microsoft
+Samsung Electronics
+Wells Fargo
+Citigroup
+Walmart
+Verizon Communications
+Royal Dutch Shell
+Amazon
+Volkswagen Group
+UnitedHealth Group
+Allianz
+Comcast
+China Mobile
+Total
+Gazprom
+Johnson & Johnson
+RBC
+Walt Disney
+Intel
+Facebook
+CVS Health
+Nestlé
+BNP Paribas
+Nippon Telegraph & Tel
+HSBC Holdings
+TD Bank Group
+Goldman Sachs Group
+Morgan Stanley
+Pfizer
+IBM
+Mitsubishi UFJ Financial
+General Electric
+Rosneft
+Santander
+Anheuser-Busch InBev
+Reliance Industries
+Sony
+Chevron
+Siemens
+Cigna
+AXA Group
+AIA Group
+Softbank
+Novartis
+Deutsche Telekom
+Petrobras
+Procter & Gamble
+Japan Post Holdings
+LVMH Moët Hennessy Louis Vuitton
+Roche Holding
+BMW Group
+Zurich Insurance Group
+CITIC
+Itaú Unibanco Holding
+MetLife
+Sumitomo Mitsui Financial
+Cisco Systems
+Honda Motor
+Commonwealth Bank
+Bank of Nova Scotia
+Raytheon Technologies
+PepsiCo
+American Express
+General Motors
+British American Tobacco
+Merck & Co.
+BHP Group
+Oracle
+Brookfield Asset Management
+Coca-Cola
+Enel
+GlaxoSmithKline
+LukOil
